@@ -23,10 +23,15 @@ class App extends Component {
     }
 
     componentDidMount() {
-      this.performSearch();
+      if (window.location.href.indexOf('/search/') > 0) {
+        var pathArray = window.location.pathname.split( '/' );
+        this.performSearch(pathArray[2]);
+      } else {
+        this.performSearch();
+      }
     }
 
-    performSearch = (query = 'cat') => {
+    performSearch = (query = '') => {
       axios.get(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${query}&per_page=20&format=json&nojsoncallback=1`)
         .then(response => {
           this.setState({

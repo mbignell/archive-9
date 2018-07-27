@@ -10,7 +10,7 @@ const Header = props => {
   return(
     <header>
       <Route path={'/search'} component={ () => <Form performSearch={props.performSearch} /> } />
-      <Navigation />
+      <Navigation performSearch={props.performSearch} />
     </header>
   );
   Header.propTypes = {
