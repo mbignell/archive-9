@@ -21,7 +21,7 @@ const Gallery = (props) => {
 
   return(
     <div className="photo-container">
-      <h2>{props.match.params.query} Images</h2>
+      <h2>{props.title} Images</h2>
       <ul className="galleryList">
         {gallery}
       </ul>

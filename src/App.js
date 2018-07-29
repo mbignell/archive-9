@@ -18,6 +18,7 @@ class App extends Component {
       super();
       this.state = {
         images: [],
+        pagetitle: "",
         loading: true
       };
     }
@@ -36,6 +37,7 @@ class App extends Component {
         .then(response => {
           this.setState({
             images: response.data.photos.photo,
+            pagetitle: query,
             loading: false
           });
         })
@@ -56,7 +58,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={EmptyState}/>
               <Route exact path="/search" component={null}/>
-              <Route path="/search/:query" component={ (props) => <Gallery {...props} data={this.state.images} /> } />
+              <Route path="/search/:query" component={ (props) => <Gallery {...props} data={this.state.images}  title={this.state.pagetitle} /> } />
               <Route component={NotFound}/>
             </Switch>
 
