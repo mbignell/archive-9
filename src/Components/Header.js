@@ -13,8 +13,8 @@ const Header = props => {
       <Navigation performSearch={props.performSearch} />
     </header>
   );
-  Header.propTypes = {
-    performSearch: PropTypes.func.isRequired,
-  }
+}
+Header.propTypes = {
+  performSearch: PropTypes.func.isRequired,
 }
 export default Header;

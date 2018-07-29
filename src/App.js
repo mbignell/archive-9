@@ -47,7 +47,6 @@ class App extends Component {
     }
 
     render() {
-      console.log(this.state.images)
       return (
         <BrowserRouter>
           <div className="container">

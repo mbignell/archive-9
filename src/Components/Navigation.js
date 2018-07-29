@@ -1,8 +1,7 @@
 import React from 'react';
 import {
   Route,
-  NavLink,
-  Redirect
+  NavLink
 } from 'react-router-dom';
 import OpenSearch from './OpenSearch';
 

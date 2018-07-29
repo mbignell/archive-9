@@ -4,8 +4,6 @@ import NoResults from './NoResults';
 
 const Gallery = (props) => {
 
-  // let query = match.params.que ry;
-  console.log(props.match.params)
   const results = props.data;
   let gallery;
   if (results.length > 0) {
