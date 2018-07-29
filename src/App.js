@@ -58,7 +58,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={EmptyState}/>
               <Route exact path="/search" component={null}/>
-              <Route path="/search/:query" component={ (props) => <Gallery {...props} data={this.state.images}  title={this.state.pagetitle} /> } />
+              <Route path="/search/:query" component={ (props) => <Gallery {...props} data={this.state.images}  title={this.state.pagetitle} loading={this.state.loading} /> } />
               <Route component={NotFound}/>
             </Switch>
 

@@ -21,10 +21,16 @@ const Gallery = (props) => {
 
   return(
     <div className="photo-container">
-      <h2>{props.title} Images</h2>
-      <ul className="galleryList">
-        {gallery}
-      </ul>
+      {
+        (props.loading)
+        ? <p className="loading">Loading results...</p>
+        : <div>
+            <h2>{props.title} Images</h2>
+            <ul className="galleryList">
+              {gallery}
+            </ul>
+          </div>
+      }
     </div>
   );
 }

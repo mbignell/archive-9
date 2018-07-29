@@ -69,6 +69,7 @@ input {
   height: 165px;
   overflow: hidden;
   margin-bottom: 15px;
+  background: #eef0f3;
 }
 .photo-container ul img {
   width: 100%;
@@ -102,6 +103,12 @@ input {
   fill: white;
   margin-left: 2px;
   margin-right: -11px;
+}
+
+p.loading {
+  font-size: 30px;
+  color: rgb(159, 168, 173);
+  padding-top: 30px;
 }
 
 @media only screen and (max-width: 767px)  {
